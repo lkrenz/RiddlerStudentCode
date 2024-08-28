@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * for Adventures in Algorithms
  * At Menlo School in Atherton, CA
  *
- * Completed by: YOUR NAME HERE
+ * Completed by: Liam Krenz
  */
 public class Riddler {
 

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public class Riddler {
 
     public String decryptOne(String encrypted) {
-        String decrypted = "";
 
+        String decrypted = "";
         // Convert the inputted string into an array of chars to use enhanced for loop
         char[] encryptedArray = encrypted.toCharArray();
 
@@ -32,15 +32,17 @@ public class Riddler {
             }
             decrypted += newText;
         }
-
+        System.out.println(decrypted);
         return decrypted;
     }
 
     public String decryptTwo(String encrypted) {
         String decrypted = "";
 
-        // TODO: Complete the decryptTwo() function.
+        // Split the paragraph into an array of strings.
         String[] newText = encrypted.split(" ", 0);
+
+        // Iterate through the paragraph and convert each askii value to plaintext.
         for (String i : newText) {
             int integerValue = Integer.parseInt(i);
             char letter = (char) integerValue;
@@ -52,14 +54,13 @@ public class Riddler {
     public String decryptThree(String encrypted) {
         String decrypted = "";
 
-        // TODO: Complete the decryptThree() function.
-        for (int i = 0; i + 8 < encrypted.length(); i += 8) {
+        // Iterate through the binary paragraph by eight character chunks, converting each into plain text.
+        for (int i = 0; i < encrypted.length(); i += 8) {
             String numbers = encrypted.substring(i, i+8);
             int decimal = Integer.parseInt(numbers, 2);
             decrypted += (char) decimal;
         }
-
-
+        System.out.println(decrypted);
         return decrypted;
     }
 
@@ -67,6 +68,11 @@ public class Riddler {
         String decrypted = "";
 
         // TODO: Complete the decryptFour() function.
+        for (int i = 0; i < encrypted.length(); i++) {
+            String emoji = encrypted.substring(i, i+1);
+            int unicode = emoji.codePointAt(0);
+            System.out.println(unicode + "");
+        }
 
         return decrypted;
     }

@@ -12,6 +12,7 @@ public class RiddlerTester {
         solver.decryptOne(encrypted);
     }
 
+    @org.junit.Test
     @Test
     public void testTwo() {
         setTestData("2");

@@ -22,13 +22,9 @@ public class Riddler {
             char newText = i;
             // Use two separate cases for uppercase and lowercase
             if (i <= 90 && i >= 65) {
-                newText += 9;
-                if (newText > 90)
-                    newText -= 26;
+                newText = (char) (((newText - 56) % 26) + 65);
             } else if (i >= 97 && i <= 122) {
-                newText += 9;
-                if (newText > 122)
-                    newText -= 26;
+                newText = (char) (((newText - 88) % 26) + 97);
             }
             decrypted += newText;
         }
@@ -40,13 +36,12 @@ public class Riddler {
         String decrypted = "";
 
         // Split the paragraph into an array of strings.
-        String[] newText = encrypted.split(" ", 0);
+        String[] newText = encrypted.split(" ");
 
         // Iterate through the paragraph and convert each askii value to plaintext.
         for (String i : newText) {
             int integerValue = Integer.parseInt(i);
-            char letter = (char) integerValue;
-            decrypted += letter;
+            decrypted += (char) integerValue;
         }
         return decrypted;
     }
@@ -67,13 +62,13 @@ public class Riddler {
     public String decryptFour(String encrypted) {
         String decrypted = "";
 
-        // TODO: Complete the decryptFour() function.
+        // Convert the emojis into their Unicode decimal number then convert into askii range.
         for (int i = 0; i < encrypted.length(); i++) {
             String emoji = encrypted.substring(i, i+1);
             int unicode = emoji.codePointAt(0);
-            System.out.println(unicode + "");
+            decrypted += (char) (unicode - 9951 + 32);
         }
-
+        System.out.println(decrypted);
         return decrypted;
     }
 }

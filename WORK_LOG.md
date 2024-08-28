@@ -7,6 +7,7 @@ Name: YOUR NAME HERE
 | Aug 22 |      7:00-7:15      |                                                                                             Finished writing code for the second and third passages. I will keep working on this tomorrow once I figure out how to run the code. |
 | Aug 27 |      4:45-5:00      |                                                                                                                                                                      Tried to debug issue with running code but did not succeed. |
 | Aug 27 |      6:15-6:45      |                                                                           Got the code to run :). THe first three decoders work but they don't handle indentations properly. I am still working to understand the fourth cypher. |
+| Aug 28 |     3:05 - 3:22     |                                                                                                                                     Finished code for section four and edited code for sections one and two to be more efficient |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.

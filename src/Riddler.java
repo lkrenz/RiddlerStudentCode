@@ -52,11 +52,27 @@ public class Riddler {
         // Iterate through the binary paragraph by eight character chunks, converting each into plain text.
         for (int i = 0; i < encrypted.length(); i += 8) {
             String numbers = encrypted.substring(i, i+8);
-            int decimal = Integer.parseInt(numbers, 2);
+            int decimal = toInt(numbers);
             decrypted += (char) decimal;
         }
         System.out.println(decrypted);
         return decrypted;
+    }
+
+    // Converts an eight bit binary input into its decimal value.
+    public int toInt(String numbers) {
+        int total = 0;
+        int length = numbers.length();
+
+        // Iterates through each digit, starting with the first an multiplying by two each time.
+        for (int i = 0; i < length - 1; i++) {
+            total += numbers.charAt(i) - '0';
+            total *= 2;
+        }
+
+        // Adds the final digit without multiplying and returns.
+        total += numbers.charAt(length - 1) - '0';
+        return total;
     }
 
     public String decryptFour(String encrypted) {
@@ -64,8 +80,7 @@ public class Riddler {
 
         // Convert the emojis into their Unicode decimal number then convert into askii range.
         for (int i = 0; i < encrypted.length(); i++) {
-            String emoji = encrypted.substring(i, i+1);
-            int unicode = emoji.codePointAt(0);
+            int unicode = encrypted.codePointAt(i);
             decrypted += (char) (unicode - 9951 + 32);
         }
         System.out.println(decrypted);

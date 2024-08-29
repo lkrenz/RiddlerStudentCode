@@ -9,6 +9,7 @@ Name: YOUR NAME HERE
 | Aug 27 |      6:15-6:45      |                                                                           Got the code to run :). THe first three decoders work but they don't handle indentations properly. I am still working to understand the fourth cypher. |
 | Aug 28 |     3:05 - 3:22     |                                                                                                                                     Finished code for section four and edited code for sections one and two to be more efficient |
 | Aug 29 |    11:00 - 11:16    |                                                                                             I couldn't figure out if parse int used bit shifting so I used this time to write my own method that used the more efficient method. |
+| Aug 29 |    11:30 - 11:45    |                                                                                                                                              Spent this time trying to figure out what the final word was, I was not successful. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.

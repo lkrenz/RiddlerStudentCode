@@ -10,6 +10,7 @@ Name: YOUR NAME HERE
 | Aug 28 |     3:05 - 3:22     |                                                                                                                                     Finished code for section four and edited code for sections one and two to be more efficient |
 | Aug 29 |    11:00 - 11:16    |                                                                                             I couldn't figure out if parse int used bit shifting so I used this time to write my own method that used the more efficient method. |
 | Aug 29 |    11:30 - 11:45    |                                                                                                                                              Spent this time trying to figure out what the final word was, I was not successful. |
+| Aug 29 |      5:30-6:00      |                                                                                              Finished code by taking out print statements and checking style. Spent the rest of the time working on figuring out the final word. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.

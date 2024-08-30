@@ -14,14 +14,14 @@ public class Riddler {
     public String decryptOne(String encrypted) {
         String decrypted = "";
 
-        // Convert the inputted string into an array of chars to use enhanced for loop
+        // Convert the inputted string into an array of chars to use enhanced for loop.
         char[] encryptedArray = encrypted.toCharArray();
 
-        // Use the askii values of each character to shift the value by 9
+        // Use the askii values of each character to shift the value by 9.
         for (char i : encryptedArray) {
             char newText = i;
 
-            // Use two separate cases for uppercase and lowercase
+            // Uses two separate cases for uppercase and lowercase.
             if (i <= 90 && i >= 65) {
                 newText = (char) (((newText - 56) % 26) + 65);
             } else if (i >= 97 && i <= 122) {
@@ -29,7 +29,6 @@ public class Riddler {
             }
             decrypted += newText;
         }
-        System.out.println(decrypted);
         return decrypted;
     }
 
@@ -44,7 +43,6 @@ public class Riddler {
             int integerValue = Integer.parseInt(i);
             decrypted += (char) integerValue;
         }
-        System.out.println(decrypted);
         return decrypted;
     }
 
@@ -57,7 +55,6 @@ public class Riddler {
             int decimal = toInt(numbers);
             decrypted += (char) decimal;
         }
-        System.out.println(decrypted);
         return decrypted;
     }
 
@@ -85,7 +82,6 @@ public class Riddler {
             int unicode = encrypted.codePointAt(i);
             decrypted += (char) (unicode - 9951 + 32);
         }
-        System.out.println(decrypted);
         return decrypted;
     }
 }
